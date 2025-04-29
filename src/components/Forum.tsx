@@ -21,6 +21,7 @@ export function Forum() {
   }, []);
 
   const handleDelete = async (id: string) => {
+    if (!confirm("Are you sure?")) return;
     try {
       await deletePost(id);
       setPosts(posts.filter((post) => post._id !== id));

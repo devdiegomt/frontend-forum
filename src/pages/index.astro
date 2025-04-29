@@ -1,9 +1,9 @@
 ---
 import { Forum } from "../components/Forum";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<div class="bg-red-500">
-  <h1 class="text-white">This should have a red background</h1>
-</div>
-<Forum client:load />
+<Layout title="Forum" />
+  <Forum client:load />
+</Layout>
